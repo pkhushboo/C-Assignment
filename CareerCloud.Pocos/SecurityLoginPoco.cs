@@ -37,7 +37,11 @@ namespace CareerCloud.Pocos
         public bool ForceChangePassword { get; set; }
         [Column("Prefferred_Language")]
         public string PrefferredLanguage { get; set; }
+        [Timestamp]
         [Column("Time_Stamp")]
         public Byte[] TimeStamp { get; set; }
+        public virtual ICollection<ApplicantProfilePoco> AppProfile { get; set; }
+        public virtual ICollection<SecurityLoginsRolePoco> SecurityLoginsRole { get; set; }
+        public virtual ICollection<SecurityLoginsLogPoco> SecurityLoginsLog { get; set; }
     }
 }

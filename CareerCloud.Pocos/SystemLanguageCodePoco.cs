@@ -16,5 +16,6 @@ namespace CareerCloud.Pocos
         public string Name { get; set; }
         [Column("Native_Name")]
         public string NativeName { get; set; }
+        public virtual ICollection<CompanyDescriptionPoco> CompDescription { get; set; }
     }
 }
